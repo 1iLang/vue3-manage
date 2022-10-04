@@ -28,8 +28,9 @@ class HttpRequest {
       //添加响应拦截器
       instance.interceptors.response.use(function(res){
         //对响应数据做些什么
-        if(res.data.code == 200){
-          return res = res.data.data       
+        // console.log(res)
+        if(res.status == 200 || res.data.code == 200){
+          return res = res.data.code ? res.data.data : res               
         }
       },function(error){
         //对响应错误做些什么

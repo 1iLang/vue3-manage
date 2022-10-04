@@ -69,7 +69,10 @@ export default {
     border-radius: 50%;
   } 
 }
-/deep/ .el-dropdown-menu__item {
+// /deep/ .el-dropdown-menu__item {
+//   font-size: 12px;
+// }
+:deep(.el-dropdown-menu__item) {
   font-size: 12px;
 }
 .el-pos {
